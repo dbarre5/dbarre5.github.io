@@ -78,6 +78,13 @@
 									<video width ="1200" height ="600" align="middle" controls autoplay loop muted">
 									<source src="images/BOP1.webm" type="video/webm">
 									</video>
+									<p></p>
+									<p>One issue that will pop up regarding these moving meshes is related to the boundary layer. Since we are interested in physical quantities (such as shear stress) along the walls, it's important that the boundary layer is accurately resolved. Because the flow field through the domain is constantly changing (generally increasing velocity), the initial boundary layer will not be refined enough as the simulation progresses. To deal with this, instead of only using 1 mesh, several different meshes are used throughhout the entire simulation. An example of a case setup is shown below</p>
+									<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12"><span class="image fit"><img src="images/multiMesh.PNG" alt="" /></span></div>
+											</div>
+									</div>
 									<h4>Boundary Conditions</h4>
 									<h4>Numerical Instability from the Coupled Simulations</h4>
 									<h3 class="major">Possible future directions</h3>
