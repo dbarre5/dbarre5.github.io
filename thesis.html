@@ -68,7 +68,6 @@
 												<div class="col-2"><span class="image fit"><img src="" alt="" /></span></div>
 												<div class="col-4"><span class="image fit"><img src="images/Fluid Influx.png" alt="" /></span></div>
 												<div class="col-3"><span class="image fit"><img src="images/BOPStack.png" alt="" /></span></div>
-												<div class="col-12"><span class="image fit"><img src="images/multiMesh.PNG" alt="" /></span></div>
 											</div>
 										</div>
 									</section>
@@ -80,7 +79,7 @@
 									<source src="images/BOP1.webm" type="video/webm">
 									</video>
 									<p></p>
-									<p>One issue that will pop up regarding these moving meshes is related to the boundary layer. Since we are interested in physical quantities (such as shear stress) along the walls, it's important that the boundary layer is accurately resolved. Because the flow field through the domain is constantly changing (generally increasing velocity), the initial boundary layer will not be refined enough as the simulation progresses. To deal with this, instead of only using 1 mesh, several different meshes are used throughhout the entire simulation. An example of a case setup is shown below</p>
+									<p>	One issue that will pop up regarding these moving meshes is related to the boundary layer. Since we are interested in physical quantities (such as shear stress) along the walls, it's important that the boundary layer is accurately resolved. Because the flow field through the domain is constantly changing (generally increasing velocity), the initial boundary layer will not be refined enough as the simulation progresses. To deal with this, instead of only using 1 mesh, several different meshes are used throughout the entire simulation. An example of a case setup is shown below</p>
 									<section>
 										<div class="box alt">
 												<div class="row gtr-uniform">
@@ -89,6 +88,30 @@
 										</div>
 									</section>
 									<h4>Boundary Conditions</h4>
+									<p>Can't use a constant inlet velocity profile if you want an accurate representation</p>
+									<section>
+										<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/multiMesh.PNG" alt="" /></span></div>
+												</div>
+										</div>
+									</section>
+									<p>	A constant pressure boundary condition does exist, but it's at the reservoir, thousands of feet below the BOP</p>
+									<section>
+										<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/multiMesh.PNG" alt="" /></span></div>
+												</div>
+										</div>
+									</section>
+									<p> 	The coupling algorithm is shown below. It is just a simple explicit coupling algorithm</p>
+									<section>
+										<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/multiMesh.PNG" alt="" /></span></div>
+												</div>
+										</div>
+									</section>
 									<h4>Numerical Instability from the Coupled Simulations</h4>
 									<h3 class="major">Possible future directions</h3>
 									<p></p>
