@@ -62,9 +62,7 @@
 									<p>Below, you can view individual sections to look at the full details, and you can even get access to the source code for some of the projects.</p>
 									
 									<h4>Preformatted</h4>
-										<pre><code>
-
-import sys
+										<pre><code>import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -85,12 +83,9 @@ rhoL = 8;
 pL = 10/gamma;
 TL=0;
 aL=(gamma*pL/rhoL)**0.5;
-UL=0;
-</code></pre>
-									
-									<pre><code>
-
-#Compatibility equation
+UL=0;</code></pre>
+					
+									<pre><code>#Compatibility equation
 def shockTubeFunction(x):
     a = x-1/x
     b = aL*(gamma+1)/(gamma-1)
@@ -128,12 +123,9 @@ def bisectionMethodShockTube(lowerBoundGuess,upperBoundGuess,percentErrorToleran
         #bisection method, so cut error in half every iteration
         absoluteError=absoluteError/2
     
-    return midPoint
-</code></pre>
+    return midPoint</code></pre>
 									
-									<pre><code>
-
-def plotShockTube(M,x0,t):
+									<pre><code>def plotShockTube(M,x0,t):
     
     Ms = bisectionMethodShockTube(1,2,0.000001)
 
@@ -204,8 +196,7 @@ def plotShockTube(M,x0,t):
     plt.title('dimensionless velocity')
     plt.xlabel('x')
     plt.axis([0, max(xLoc), 0, 1.2*max(U)])
-    plt.show()
-</code></pre>
+    plt.show()</code></pre>
 									
 								</div>
 							</div>
