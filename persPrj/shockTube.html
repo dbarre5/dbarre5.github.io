@@ -59,7 +59,9 @@
 									<section>
 										<div class="box alt">
 											<div class="row gtr-uniform">
-												<div class="col-12"><span class="image fit"><img src="images/shockEquation.PNG" alt="" /></span></div>
+												<div class="col-2"><span class="image fit"><img src="" alt="" /></span></div>
+												<div class="col-8"><span class="image fit"><img src="images/shockEquation.PNG" alt="" /></span></div>
+												<div class="col-2"><span class="image fit"><img src="" alt="" /></span></div>
 											</div>
 										</div>
 									</section>
@@ -87,7 +89,16 @@ pL = 10/gamma;
 TL=0;
 aL=(gamma*pL/rhoL)**0.5;
 UL=0;</code></pre>
-		<h4>Creating functions. The first is the compatibility equation. The second function uses a root finding method (bisection method) to solve the equation shown above:</h4>			
+		<h4>Creating functions. The first is the compatibility equation. The second function uses a root finding method (bisection method) to solve the equation shown below: (solving for Ms)</h4>
+							<section>
+								<div class="box alt">
+									<div class="row gtr-uniform">
+										<div class="col-2"><span class="image fit"><img src="" alt="" /></span></div>
+										<div class="col-8"><span class="image fit"><img src="images/shockEquation.PNG" alt="" /></span></div>
+										<div class="col-2"><span class="image fit"><img src="" alt="" /></span></div>
+									</div>
+								</div>
+							</section>
 									<pre><code>#Compatibility equation
 def shockTubeFunction(x):
     a = x-1/x
