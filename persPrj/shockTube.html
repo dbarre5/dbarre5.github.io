@@ -58,10 +58,8 @@
 									<p>description of overview</p>
 									<li><a href="//github.com/dbarre5/wellbore_project">Click here to be redirected to the github where c++ code files for this project belong</a></li>
 									<p> </p>
-									<h3 class="major">Detailed descriptions</h3>
-									<p>Below, you can view individual sections to look at the full details, and you can even get access to the source code for some of the projects.</p>
-									
-									<h4>Preformatted</h4>
+									<h3 class="major">Python Code</h3>
+									<h4>Initializations of the code. Includes importing libraries, initialize left and right fluid properties</h4>
 										<pre><code>import sys
 import numpy as np
 import matplotlib.pyplot as plt
@@ -84,7 +82,7 @@ pL = 10/gamma;
 TL=0;
 aL=(gamma*pL/rhoL)**0.5;
 UL=0;</code></pre>
-					
+		<h4>Creating functions. The first is the compatibility equation. The second function uses a root finding method (bisection method) to solve the equation shown above:</h4>			
 									<pre><code>#Compatibility equation
 def shockTubeFunction(x):
     a = x-1/x
@@ -124,7 +122,8 @@ def bisectionMethodShockTube(lowerBoundGuess,upperBoundGuess,percentErrorToleran
         absoluteError=absoluteError/2
     
     return midPoint</code></pre>
-									
+				<h4>Creating a final function that can be called to plot the dimensionless density, velocity and pressure</h4>			
+							
 									<pre><code>def plotShockTube(M,x0,t):
     
     Ms = bisectionMethodShockTube(1,2,0.000001)
