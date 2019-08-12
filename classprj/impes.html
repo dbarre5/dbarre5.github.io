@@ -62,9 +62,11 @@
 									<p>In near-wellbore regions of a reservoir, fluid flow will begin to depart from Darcy’s Law. Reservoir simulation packages handle this through analytical solutions to simplified geometries and rock properties. However, in more complex completion scenarios, analytical solutions are no longer obtainable. In cases such as these, numerical solutions can be used to analyze the problem [1,2]. Commercial reservoir simulation software packages lack the flexibility needed to simulate such processes. Because of this, it would be beneficial to work on a reservoir simulation toolbox in OpenFOAM [3], a set of C++ libraries for the use and development of numerical solvers.   
 Because of OpenFOAM’s flexibility and availability, a reservoir simulation toolbox could serve as a useful research tool for advanced simulations. Several researchers have utilized OpenFOAM for reservoir simulation [4-6]. While other reservoir simulation toolboxes exist in OpenFOAM, these have not implemented coupling of reservoir simulation with CFD or 1-D pipe simulations. The goal of this project is to develop an open-source, simplified reservoir simulator in OpenFOAM that can be easily coupled to other simulations. </p>
 									<h3 class="major">Details</h3>
+									<p>`phirhoc_tpartialp/(partialt)=nabla*(rho/muk(nablap-rhognablaz))+q` </p>
 									<p>`phipartialS_w /(partialt)=nabla*gamma_wk(lambdap_w-gamma_wnablaz)+q_w` </p>
-									<p>`k_(rw)-k_(rw,max)(S_w-S_(wc)/(1-S_(or)-S_(wc)-S_(gc)))^A` </p>
-									<p>`k_(ro)-k_(ro,max)(S_o-S_(or)/(1-S_(or)-S_(wc)-S_(gc)))^B` </p>
+									<p>`P_c = P_o-P_w=0` </p>
+									<p>`k_(rw)=k_(rw,max)((S_w-S_(wc))/(1-S_(or)-S_(wc)-S_(gc)))^A` </p>
+									<p>`k_(ro)=k_(ro,max)((S_o-S_(or))/(1-S_(or)-S_(wc)-S_(gc)))^B` </p>
 									<video width ="1000" height ="600" align="middle" controls autoplay loop muted">
 									<source src="images/buck.ogv" type="video/ogg">
 									</video>
