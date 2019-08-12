@@ -96,7 +96,52 @@ while (Pu-PFinal>10){
 
 	T1 = TRes;	
 
-
+	for(int i = 0; i < WHL+1; i = i + 1 ) {
+		if (i == 0) {
+			TubingP.push_back(Pwf);
+			Tf.push_back(TRes);
+			TestL = TestL + dL;
+                        qLi = qL;
+                        rhoLi = rhoL;
+		}
+		else{
+			POld = TubingP[i-1];
+			PNext = POld - POld*dL / Length; /*For the guess, assume linear pressure distribution*/
+			Pguess = PNext + 50;
+			counter = 0;
+			Tei = T1;
+			T1 = T1 - gG*dL*sinThetas[i];
+                        TEnv.push_back(T1);
+			while (abs(Pguess - PNext) > 1 || counter > 10000){
+	 			Pguess = PNext;
+				/*Calculate the temperature based on analytical Solution*/
+				#include "TEqn.H"
+				/*Calculate Fluid Properties based on Temp and Pressure*/
+				P = TubingP[i-1];
+				T = Tf[i-1];
+				#include "FluidProperties.H" /*use POld**/
+				/*Calculate dPdL using H&G*/
+				#include "HagedornAndBrown.H"
+				PNext = TubingP[i-1] - dPdL * dL;
+				counter = counter+1;
+					cout << "counter ====================== " << counter << endl;
+				cout << "TubingP= " << TubingP[i] << endl;
+				cout << "PNext= " << PNext << endl;
+				cout << "POld= " << POld << endl << endl;
+				cout << "Pguess= " << Pguess << endl << endl;
+				cout << "Temp= " << TemporaryT << endl << endl;
+		      }
+		
+		      TubingP.push_back(PNext);
+		      Tf.push_back(TemporaryT);
+                      rhoLvec.push_back(rhoL);
+			
+		}
+		
+	}
+	PFinal = TubingP[WHL-2];
+	Pwf= Pwf+1;
+}	
 
 
 									</code></pre>
