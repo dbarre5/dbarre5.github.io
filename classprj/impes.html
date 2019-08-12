@@ -67,7 +67,7 @@ Because of OpenFOAM’s flexibility and availability, a reservoir simulation too
 									
 									
 									<h3 class="major">Details</h3>
-									<p>The following set of equations below are discretized as solved using OpenFOAM.</p>
+									<p>The following set of equations below are discretized and solved using OpenFOAM. A custom solver is made and compiled for this task. The result is simulation of 2-phase incompressible flow through reservoir.</p>
 									<p>`phirhoc_tpartialp/(partialt)=nabla*(rho/muk(nablap-rhognablaz))+q` </p>
 									<p>`phipartialS_w /(partialt)=nabla*gamma_wk(lambdap_w-gamma_wnablaz)+q_w` </p>
 									<p>`P_c = P_o-P_w=0` </p>
@@ -88,13 +88,12 @@ Because of OpenFOAM’s flexibility and availability, a reservoir simulation too
 										</div>
 									</section>
 									<h3 class="major">Waterflooding simulations</h3>
-									<p>An example set of simulations is shown below on a 50x50x1 size grid. Water is being injected in the lower left corner of an oil saturated system. Red indicateds high water saturation, and blue indicates low water saturation (regions filled with oil).</p>
+									<p>An example set of simulations is shown below on a 50x50x1 size grid. Water is being injected in the lower left corner of an oil saturated system. Red indicateds high water saturation, and blue indicates low water saturation (regions filled with oil). The 3 simulations differ by the ratio of viscosities between oil and water.</p>
 									<video width ="1000" height ="600" align="middle" controls autoplay loop muted">
 									<source src="images/flood.ogv" type="video/ogg">
 									</video>
-									<li><a href="//github.com/dbarre5/wellbore_project">Click here to be redirected to the github where c++ code files for this project belong</a></li>
-									<h3 class="major">Detailed descriptions</h3>
-									<p>Below, you can view individual projects to look at the full details, and you can even get access to the source code for some of the projects.</p>
+									
+									
 
 									
 
