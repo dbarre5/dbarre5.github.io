@@ -80,7 +80,7 @@
 							<section id="three" class="wrapper spotlight style3">
 								<div class="inner">
 									<!--<a href="classprj.html" class="image"><img src="images/impesfoam.PNG" alt="" /></a>-->
-									<a href="classprj.html" class="image"><video width ="200" height ="300" controls playsinline autoplay loop muted">
+									<a href="classprj.html" class="image"><video width ="200" height ="300" class="landing" controls playsinline autoplay loop muted">
 									<source src="images/impesCover.ogv" type="video/ogg" alt="images/impesfoam.PNG">
 									</video></a>
 									
@@ -165,6 +165,7 @@
 			<script>
     			document.getElementById('video').play();
 			</script>
+			<script> $( window ).load(function() { $( '.landing' ).get(0).play(); }); </script>
 
 	</body>
 </html>
