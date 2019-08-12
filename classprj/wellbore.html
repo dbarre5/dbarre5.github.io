@@ -72,6 +72,32 @@
 #include "InputDeck.H"
 #include "assignThetas.H"  /*Creates an array of theta values based on WellTrajectories*/
 
+Pu = Pwf + 10000;
+gammaO = 141.5 / (APIOil + 131.5);
+
+while (Pu-PFinal>10){
+	#include "IPR.H"
+	#include "chokeEqn.H"
+	double TestL = 0;
+
+	/*--CLEAR----
+	-----ALL-----
+	---VECTORS---
+	-----HERE--*/
+	Tf.clear();
+	TubingP.clear();
+	Tf.push_back(TRes);
+
+	/*Calculate some initial fluid properties at reservoir Temp because
+	we need it to calculate density for the TEqn*/
+	T = TRes;
+	P = PRes;
+	#include "FluidProperties.H"
+
+	T1 = TRes;	
+
+
+
 
 									</code></pre>
 								</div>
