@@ -83,14 +83,6 @@
 									<a href="classprj.html" class="image"><video width ="200" height ="300" class="landing" id="myvideo" controls preload playsinline autoplay loop muted">
 									<source src="images/impesCover.ogv" type="video/ogg" alt="images/impesfoam.PNG">
 									</video></a>
-									window.addEventListener('load', async () => {
-  									let video = document.querySelector('video[muted][autoplay]');
-									  try {
-									    await video.play();
-									  } catch (err) {
-									    video.controls = true;
-									  }
-									});
 									
 									<div class="content">
 										<h2 class="major">Coursework Projects</h2>
@@ -174,6 +166,14 @@
     			document.getElementById('myvideo').play();
 			</script>
 			<script> $( window ).load(function() { $( '.landing' ).get(0).play(); }); </script>
+			<script>window.addEventListener('load', async () => {
+  									let video = document.querySelector('video[muted][autoplay]');
+									  try {
+									    await video.play();
+									  } catch (err) {
+									    video.controls = true;
+									  }
+									});</script>
 
 	</body>
 </html>
