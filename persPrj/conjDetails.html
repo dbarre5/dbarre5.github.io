@@ -56,6 +56,7 @@
 									<h3 class="major">Navigation Panel</h3>
 									<p>This page is long. If you want to skip to a particular section, click on one of the links below</p>
 												<ul>
+													<li><a href="#Setup">Skip to Simulation Setup</a></li>
 													<li><a href="#Grid">Skip to grid independence study</a></li>
 													<li><a href="#Solution">Skip to CFD comparison to analytical solution</a></li>
 												</ul>
@@ -155,6 +156,16 @@ plt.xlabel('Thickness, m')
 plt.axis([0, max(tA), 0, 1.2*max(qA)])
 plt.show()</code></pre>
 									
+									<h3 class="major"><a name="Setup">FVM Simulation Setup</h3>
+									<p>OpenFOAM, an open source FVM simulation software package, is used to simulate flow over a plat with an adiabatic tip. Here,  I am using an already existing solver called chtMultiRegionFoam. It is a conjugate heat transfer solver that allows for coupled thermal simulation between fluids and solids. In this setup, I have two regions: the solid fin and the air flowing over the fin. For more details on boundary conditions, go back to the previous page and click on the link which brings you to the tutorial on how to set up this problem in OpenFOAM.</p>
+									<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-2"><span class="image fit"><img src="" alt="" /></span></div>
+												<div class="col-8"><span class="image fit"><img src="images/gridStudy.PNG" alt="" /></span></div>
+												<div class="col-2"><span class="image fit"><img src="" alt="" /></div>
+											
+											</div>
+										</div>
 									<h3 class="major"><a name="Grid">Grid Independence Study</h3>
 									<p>A grid independence study is carried out on 3 different sized grids. x,y,and z node count is doubled for the fluid. For the solid, x and y node sizes are doubled, though z node count is left constant. This is because I am not really expecting much change of heat transfer solution in the z direction for the solid, so I didn't really see the point in increasing computation in that area.</p>
 									<section>
