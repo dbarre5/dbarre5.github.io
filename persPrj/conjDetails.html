@@ -157,7 +157,7 @@ plt.axis([0, max(tA), 0, 1.2*max(qA)])
 plt.show()</code></pre>
 									
 									<h3 class="major"><a name="Setup">FVM Simulation Setup</h3>
-									<p>OpenFOAM, an open source FVM simulation software package, is used to simulate flow over a plat with an adiabatic tip. Here,  I am using an already existing solver called chtMultiRegionFoam. It is a conjugate heat transfer solver that allows for coupled thermal simulation between fluids and solids. In this setup, I have two regions: the solid fin and the air flowing over the fin. For more details on boundary conditions, go back to the previous page and click on the link which brings you to the tutorial on how to set up this problem in OpenFOAM.</p>
+									<p>OpenFOAM, an open source FVM simulation software package, is used to simulate flow over a plate with an adiabatic tip. Here,  I am using an already existing solver called chtMultiRegionFoam. It is a conjugate heat transfer solver that allows for coupled thermal simulation between fluids and solids. In this setup, I have two regions: the solid fin and the air flowing over the fin. For more details on boundary conditions, go back to the previous page and click on the link which brings you to the tutorial on how to set up this problem in OpenFOAM.</p>
 									<div class="box alt">
 											<div class="row gtr-uniform">
 												<div class="col-3"><span class="image fit"><img src="" alt="" /></span></div>
@@ -182,6 +182,16 @@ plt.show()</code></pre>
 									<li><a href="//github.com/dbarre5/sources/tree/master/openFOAM/singleFin/gridStudy">See source OpenFOAM files that run this grid independence study (redirects you to a github repository)</a></li>
 									<p> <br> <br>Note that for the files above, you would only need to type ./Allrun in the terminal to run this grid independence study. I have set up this script to automatically generate 3 cases from the base folder. </p>
 									<h3 class="major"><a name="Solution">Comparison to Analytical solution</h3>
+									<section>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-2"><span class="image fit"><img src="" alt="" /></span></div>
+												<div class="col-8"><span class="image fit"><img src="images/thicknessStudy.PNG" alt="" /></span></div>
+												<div class="col-2"><span class="image fit"><img src="" alt="" /></div>
+											
+											</div>
+										</div>
+									</section>
 									<p> <br></p>
 								</div>
 							</div>
