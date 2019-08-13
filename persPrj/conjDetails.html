@@ -168,7 +168,8 @@ plt.show()</code></pre>
 										</div>
 									</section>
 									<p> The heat transfer through the left side of the fin is compared for all cases. The heat rate may be simply calculated by the conduction equation: `q_f=kA(partialT)/(partialt)`. Since the gradient of temperature is not calculated (only temperature itself is calculated from the simulation), ` (partialT)/(partialt)` on the left face of the solid is approximated by a forward finite difference on the grid from the FVM simulation. The results from the independence study can be seen below.
-									<li><a href="#Grid">See source OpenFOAM files that run this grid independence study (redirects you to a github repository)</a></li>
+									<li><a href="//github.com/dbarre5/sources/tree/master/openFOAM/singleFin/gridStudy">See source OpenFOAM files that run this grid independence study (redirects you to a github repository)</a></li>
+									<p> Note that for the files above, you would only need to type ./Allrun in the terminal to run this grid independence study. I have set up this script to automatically generate 3 cases from the base folder.</p>
 									<h3 class="major"><a name="Solution">Comparison to Analytical solution</h3>
 									<p> <br></p>
 								</div>
