@@ -142,10 +142,12 @@ qA = np.zeros(n)
 
 for i in range(1,n):
     tA[i] = t0*i
+    Ac = tA[i]*L
+    P = 2*(L+tA[i]) #perimeter
     #print(tA[i])
     V = b*tA[i]*L #Volume of fin
-    mb = V/(L)*(2*h/k_al/(tA[i])**3)**0.5
-    a = (h*2*(L+tA[i])*k_al*L*tA[i])**(0.5)*theta_b
+    mb = b*(P*h/k_al/(Ac))**0.5
+    a = (h*P*k_al*L*tA[i])**(0.5)*theta_b
     qA[i] = a*np.tanh(mb) #heat rate
     #print(qA[i])
 
