@@ -180,7 +180,7 @@ plt.show()</code></pre>
 											</div>
 										</div>
 									</section>
-									<p> The heat transfer through the left side of the fin is compared for all cases. The heat rate may be simply calculated by the conduction equation: `q_f=kA(partialT)/(partialt)`. Since the gradient of temperature is not calculated (only temperature itself is calculated from the simulation), ` (partialT)/(partialt)` on the left face of the solid is approximated by a forward finite difference on the grid from the FVM simulation. The results from the independence study can be seen below.</p>
+									<p> The heat transfer through the left side of the fin is compared for all cases. The heat rate may be simply calculated by the conduction equation: `q_f=kA(partialT)/(partialt)`. Since the gradient of temperature is not calculated (only temperature itself is calculated from the simulation), ` (partialT)/(partialt)` on the left face of the solid is approximated by a forward finite difference on the grid from the FVM simulation. The results from the independence study can be seen below. As can be seen, the difference between the heat transfer for 5632 and 38912 nodes is insignificant (at least for the purpose of this study, which is just to compare heat transfer to the analytical solution). Because of this observation, 5632 nodes are used for all simulations moving forward to save on computation time. I am running all of these simulations on a 10 year old, 2 gig ram laptop, so I'm trying to keep these as simple as possible.</p>
 									<section>
 										<div class="box alt">
 											<div class="row gtr-uniform">
@@ -194,12 +194,20 @@ plt.show()</code></pre>
 									<li><a href="//github.com/dbarre5/sources/tree/master/openFOAM/singleFin/gridStudy">See source OpenFOAM files that run this grid independence study (redirects you to a github repository)</a></li>
 									<p> <br> <br>Note that for the files above, you would only need to type ./Allrun in the terminal to run this grid independence study. I have set up this script to automatically generate 3 cases from the base folder. </p>
 									<h3 class="major"><a name="Solution">Comparison to Analytical solution</h3>
+									<p> Using the 5632 node mesh setup, 10 different geometries are prepared to compare to the analytical solution, with plate thicknesses ranging from 0.1 to 1.0 mm in thickness. Note that these are symmetric cases being setup, so the actual thickness is 0.2 to 2.0 mm.</p>
 									<section>
 										<div class="box alt">
 											<div class="row gtr-uniform">
 												<div class="col-2"><span class="image fit"><img src="" alt="" /></span></div>
 												<div class="col-8"><span class="image fit"><img src="images/thicknessStudy.PNG" alt="" /></span></div>
 												<div class="col-2"><span class="image fit"><img src="" alt="" /></div>
+											</div>
+										</div>
+									</section>
+									<p> The simulations above are easily setup and run automatically by using a script that I created. The script sets up the apppropriate geometry thickness, runs the case, and grabs the heat transfer through the left side of each plate after the simulation is complete. After this is done, I plotted the heat transfer compared to the analytical solution. </p>
+									<section>
+										<div class="box alt">
+											<div class="row gtr-uniform">
 												<div class="col-3"><span class="image fit"><img src="" alt="" /></span></div>
 												<div class="col-6"><span class="image fit"><img src="images/heatSinkComparison.PNG" alt="" /></span></div>
 												<div class="col-3"><span class="image fit"><img src="" alt="" /></div>
@@ -207,7 +215,7 @@ plt.show()</code></pre>
 											</div>
 										</div>
 									</section>
-									<p> Three things could be going wrong here: dt/dx is not being approximated accurately, the grid is not refined enough for later cases with larger amounts of heat transfer(I only performed a grid independence study for thickness of 0.1 mm), or I am not simulating the transient case long enough to truly reach steady state</p>
+									<p> As can be seen above, the comparison is "decent," but not exact. Three things could be going wrong here that prevent it from being closer to the exact solution: (1.) dt/dx is not being approximated accurately, (2.) the grid is not refined enough for later cases with larger amounts of heat transfer(I only performed a grid independence study for thickness of 0.1 mm), or (3.) I am not simulating the transient case long enough to truly reach steady state</p>
 								</div>
 							</div>
 					</section>
