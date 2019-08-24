@@ -205,18 +205,17 @@ plt.show()</code></pre>
 											</div>
 										</div>
 									</section>
-									<p> The simulations above are easily setup and run automatically by using a script that I created. The script sets up the apppropriate geometry thickness, runs the case, and grabs the heat transfer through the left side of each plate after the simulation is complete. After this is done, I plotted the heat transfer compared to the analytical solution. </p>
+									<p> The simulations above are easily setup and run automatically by using a script that I created. The script sets up the apppropriate geometry thickness, runs the case, and grabs the heat transfer through the left side of each plate after the simulation is complete. After this is done, I plotted the heat transfer compared to the analytical solution. A good comparison to the analytical solution is shown. </p>
 									<section>
 										<div class="box alt">
 											<div class="row gtr-uniform">
 												<div class="col-3"><span class="image fit"><img src="" alt="" /></span></div>
-												<div class="col-6"><span class="image fit"><img src="images/heatSinkComparison.PNG" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/heatSinkComparison2nd.PNG" alt="" /></span></div>
 												<div class="col-3"><span class="image fit"><img src="" alt="" /></div>
 											
 											</div>
 										</div>
 									</section>
-									<p> As can be seen above, the comparison is "decent," but not exact. Three things could be going wrong here that prevent it from being closer to the exact solution: (1.) dt/dx is not being approximated accurately, (2.) the grid is not refined enough for later cases with larger amounts of heat transfer(I only performed a grid independence study for thickness of 0.1 mm), or (3.) I am not simulating the transient case long enough to truly reach steady state</p>
 								</div>
 							</div>
 					</section>
